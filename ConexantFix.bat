@@ -24,9 +24,8 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------
-@echo off
-net stop CxAudioSvc
-net stop CxMonSvc
-net stop CxUtilSvc
+taskkill /F /IM CxAudioSvc.exe
+taskkill /F /IM CxUtilSvc.exe
+taskkill /F /IM MicTray64.exe
 net start CxAudioSvc
 net start CxUtilSvc
