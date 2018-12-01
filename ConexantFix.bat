@@ -29,5 +29,4 @@ net stop CxAudioSvc
 net stop CxMonSvc
 net stop CxUtilSvc
 net start CxAudioSvc
-net start CxMonSvc
 net start CxUtilSvc
