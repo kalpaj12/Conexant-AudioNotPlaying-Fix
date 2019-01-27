@@ -29,3 +29,4 @@ taskkill /F /IM CxUtilSvc.exe
 taskkill /F /IM MicTray64.exe
 net start CxAudioSvc
 net start CxUtilSvc
+powershell -c (New-Object Media.SoundPlayer "C:\Windows\media\Ring01.wav").Play(); Start-Sleep -s 5; Exit;
