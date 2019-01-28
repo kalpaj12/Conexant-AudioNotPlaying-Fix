@@ -27,6 +27,10 @@ if '%errorlevel%' NEQ '0' (
 taskkill /F /IM CxAudioSvc.exe
 taskkill /F /IM CxUtilSvc.exe
 taskkill /F /IM MicTray64.exe
+net stop audiosrv
+net stop AudioEndpointBuilder
+net start audiosrv
+net start AudioEndpointBuilder
 net start CxAudioSvc
 net start CxUtilSvc
-powershell -c (New-Object Media.SoundPlayer "C:\Windows\media\Ring01.wav").Play(); Start-Sleep -s 5; Exit;
+powershell -c (New-Object Media.SoundPlayer "C:\Windows\media\Ring01.wav").Play(); Start-Sleep -s 2; Exit;
