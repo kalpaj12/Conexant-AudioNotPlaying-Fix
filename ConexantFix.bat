@@ -33,4 +33,7 @@ net start audiosrv
 net start AudioEndpointBuilder
 net start CxAudioSvc
 net start CxUtilSvc
+w32tm /register
+net start w32time
+w32tm /resync
 powershell -c (New-Object Media.SoundPlayer "C:\Windows\media\Ring01.wav").Play(); Start-Sleep -s 2; Exit;
